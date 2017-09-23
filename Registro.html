@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Registro</title>
+<link href="biblio.css" rel="stylesheet" type="text/css" media="screen" />
+<script type="text/javascript">
+function comprobar(){
+	correcto=true;
+
+	nombre= document.Reg.Nombre.value;
+	apellidos= document.Reg.Apel.value;
+	dirección= document.Reg.Dirección.value;
+	teléfono= document.Reg.Teléfono.value;
+	correo= document.Reg.Correo.value;
+	
+	nUsr= document.Reg.nUsr.value;
+	contraseña= document.Reg.contraseña.value;
+	contraseña2= document.Reg.contraseña2.value;
+
+	//Comprueba que ningún campo esté vacío
+	if(nombre=="" || apellidos=="" || dirección=="" || teléfono=="" || correo=="" || nUsr=="" || contraseña=="" || contraseña2==""){
+		alert("Debes rellenar todos los campos");
+		correcto=false;
+	}
+	//Si todos los campos están completos, se comprueba que el teléfono es un número, que la dirección de correo tiene el formato adecuado
+	// y que las contraseñas coinciden
+	else{
+		if(isNaN(teléfono)){
+			alert("El teléfono debe tener formato numérico");
+			correcto=false;
+		}
+		else{
+			if(comprobarCorreo(correo) == -1){	
+				alert("La dirección de correo electrónico no es válida");
+				correcto=false;
+			}
+			else if(contraseña != contraseña2){
+					alert("Comprueba tu contraseña");
+					correcto=false;
+			}
+		}
+	}
+return correcto;
+}
+
+function comprobarCorreo(correo){
+correoOK = 0;
+	//Comprueba que sólo haya una arroba y que no esté al principio
+	var arroba = correo.indexOf("@",0); 
+	if (arroba<1 || correo.lastIndexOf("@") != arroba) correoOK = -1;
+		
+	//Comprueba que el punto que separa el servidor y el dominio esté en la posición correcta
+	var punto = correo.lastIndexOf(".");
+	if(punto<arroba || punto==correo.length-1) correoOK = -1;
+
+	return correoOK;
+}
+
+</script>
+</head>
+
+<body>
+<div id="ola">
+	<div id="cabecera">
+		<div id="logo" style="height: 68px">
+			<h1 style="height: 65px">biblioteca</h1>
+			<br />
+			<br />
+			<br />
+			&nbsp;&nbsp;&nbsp;&gt;&gt; Catálogo online
+		</div>
+		<div id="identificación">
+			<form method="get" action="Identificación.asp">
+				Nombre de usuari@:<input type="text" name="Nombre"/><br />
+				Contraseña:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<input type="password" name="Contraseña"/><br /><br />
+				<input type= "submit" value="Identificarse"/>
+			</form>
+		</div>
+		<div id="miga">
+			<a href="default.htm">Área Pública</a>
+			&gt;<a href="Registro.html">Registro</a>
+		</div>
+	</div><!-- fin #cabecera -->
+	<div id="menu">
+		<ul>
+			<li><a href="default.htm">ÁREA PÚBLICA</a></li>
+			<li><a href="Catálogo.asp">CATÁLOGO</a></li>
+			<li><a href="Mapa.html">MAPA WEB</a></li>
+		</ul>
+	</div><!-- fin #menu -->
+</div><!-- fin #ola -->
+<div id="page">
+	<form method="post" name="Reg" action="Registro.asp" onsubmit="return comprobar(this)">
+	<table align="right" cellpadding="2" width="800">
+  <tr>
+    <th></th>
+    <th><h2>Datos de contacto</h2></th>
+    <th></th>
+    <th><h2>Datos de la cuenta</h2></th>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td align="left">Nombre:&nbsp</td>
+    <td></td>
+    <td align="left">Nombre de usuari@:</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><input type="text" name="Nombre"/></td>
+    <td></td>
+    <td><input type="text" name="nUsr"/></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td align="left">Apellido(s):</td>
+    <td></td>
+    <td align="left">Contraseña:</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><input type="text" name="Apel"/><br /></td>
+    <td></td>
+    <td><input type="password" name="contraseña"/></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td align="left">Dirección:</td>
+    <td></td>
+    <td align="left">Repetir contraseña:</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><input type="text" name="Dirección"/></td>
+    <td></td>
+    <td><input type="password" name="contraseña2"/></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td align="left">Teléfono:</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><input type="text" name="Teléfono"/></td>
+    <td></td>
+    <td align="center"><input type= "submit" value="Enviar"/><input  class="button" type="reset" value="Borrar"/></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td align="left">Dirección de correo electrónico:</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><input type="text" name="Correo"/></td>
+  </tr>
+</table>
+	</form>
+</div><!-- fin #page -->
+<div id="pie">Página realizada por Paula Mesa Macías
+	<form><input type="button" name="imprimir" value="Imprimir" onclick="window.print();"></form>
+</div>
+</body>
+</html>

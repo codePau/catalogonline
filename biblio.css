@@ -1,0 +1,248 @@
+﻿body {
+	margin: 0;
+	background: #FFFFFF url(images/fondo.gif) repeat-x left top;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #FFFFFF;
+}
+#ola {
+	margin: 0 auto;
+	background: url('images/ola.gif') no-repeat center top;
+	height: 213px;
+	width: 1000px;
+	color: #FFFFFF;
+}
+
+#cabecera{
+	height: 129px;
+}
+
+/* Logo */
+
+#logo {
+	float: left;
+	width: 717px;
+	height: 120px;
+	margin: 0;
+	padding: 0;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 15px;
+}
+#logo h1 {
+	font-weight: normal;
+ 	height: 69px;
+	margin: 0;
+	padding: 0;
+	float: left;
+	padding-left: 30px;
+	letter-spacing: -1px;
+	font-size: 70px;
+}
+
+#logo_miga{
+	float: left;
+	width: 717px;
+	height: 68px;
+	margin: 0;
+	padding: 0;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 15px;
+}
+#logo_miga h1 {
+	font-weight: normal;
+ 	height: 69px;
+	margin: 0;
+	padding: 0;
+	float: left;
+	padding-left: 30px;
+	letter-spacing: -1px;
+	font-size: 70px;
+}
+
+/* identificación */
+
+#identificación {
+	float: right;
+	width: 280px;
+	height: 100px;
+	padding: 0;
+}
+
+#identificación form {
+	height: 41px;
+	margin: 0;
+	padding: 30px;
+}
+
+/* Menu */
+
+#menu {
+	width: 960px;
+	height: 49px;
+	margin: 0 auto;
+	padding: 0;
+}
+
+#menu ul {
+	list-style: none;
+}
+
+#menu li {
+	float: left;
+}
+
+#menu a {
+	padding: 10px 20px 10px 20px;
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #FFFFFF;
+}
+#miga{
+	color: lime;
+	margin-left:30px;
+}
+#miga a{
+	text-decoration:none;
+	color:lime;
+	font-size:11px;
+}
+#cerrar{
+	margin-top:150px;
+	margin-right:30px;
+	float:right;
+}
+#cerrar a{
+	text-decoration: none;
+	color:aqua;
+}
+/* Page */
+
+#page {
+	width: 1024px;
+	margin: 0 auto;
+	padding: 0;
+	color:black;
+	height: 390px
+}
+#page h1{
+	text-align: center;
+	color: #A50278;
+	font-family: 'Harlow Solid Italic';
+	font-size: 40px;
+}
+#page p{
+	width: 947px;
+ 	text-align: center;
+	margin-left: 17px;
+}
+#page image{
+	width:218px;
+	height:78px;
+	height: 37px;
+	text-align: center;
+}
+#page form{
+	 width: 380px;
+	 margin-left:342px;
+	 height: 315px;
+}
+table{
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:20px;
+	text-align:center;
+	border:medium;
+	border-collapse:collapse;
+}
+#registro{
+	background:url('images/pestaña.JPG') no-repeat;
+	background-position:right bottom;
+	color: #000000;
+	width: 566px;
+	height: 130px;
+	text-align: right;
+	margin-left: 268px;
+}
+
+#pestaña{
+	background: url('images/pestaña.jpg') no-repeat;
+	height: 48px;
+	width: 315px;
+	margin-top: 10px;
+	margin-left: 600px;
+	text-align: center;
+}
+
+#pestaña a{
+	text-decoration:none;
+	color: #EE3C3C;
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+	font-size: 20px;
+}
+
+#pestaña_izq{
+	background: url('images/pestaña.jpg') no-repeat ;
+	height: 48px;
+	width: 315px;
+	margin-top: 10px;
+	margin-left: 120px;
+	text-align: center;
+}
+
+#pestaña_izq a{
+	text-decoration:none;
+	color: #EE3C3C;
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+	font-size: 20px;
+}
+ 
+#cerrando {
+	margin-top:200px;
+	text-align:center;
+	font-size:40px;
+	color:black;
+	font-family: 'Harlow Solid Italic';
+	font-weight:bold;
+}
+/* encuesta */
+
+#encuesta {
+	float: left;
+	margin-left: 30px;
+	width: 364px;
+	height: 209px;"
+	text-align: right;
+	margin-top: 48px;
+}
+
+#encuesta h2 {
+	letter-spacing: -1px;
+	font-size: 24px;
+	font-family: 'Harlow Solid Italic';
+	font-weight:bold;
+	text-align:center
+}
+
+#encuesta p {
+	margin-left:30px;
+	text-align:left;
+	width: 331px;
+}
+
+#izq{
+	text-align: right;
+}
+
+/* Pie */
+
+#pie {
+	width: 1024px;
+	height: 20px;
+	margin: 0px auto 40px auto;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #000000;
+	font-size: 10px;
+	text-align: center;
+	margin-bottom:0;
+}
